@@ -1,0 +1,54 @@
+/* Using Save Method
+    var doc=new inventory({"products":"earphone","ratings":"A+","color":"white"});
+    doc.save((error)=>{
+        if(error)return error;
+    });*/
+    /*Using InsertMany
+    inventory.insertMany([{"products":"chair"},{"company":"nike"}],function(error){
+        if(error)return error;});*/
+    /*  Using deleteOne and deleteMany
+    inventory.deleteMany({},function(error){
+        if(error) return error;})*/
+    /*Using Update
+    inventory.update({"products":"chair"},{"company":"nikon"},function(error,res){})
+    //Using Find Function
+    inventory.findOne({"company":"nikon"},"products -_id",(err,docs)=>{
+      res.send(docs.products);
+    });*/
+    
+    //res.send('test is working');
+    });
+
+   /* MongoClient.connect(url, { useNewUrlParser: true },(err,client)=>{
+        if(err!=null){
+            console.log(err);
+        }
+        assert.equal(null, err);
+        if(err==null)
+        {
+        var db=client.db("mydb");;
+        cursor=db.collection('inventory').find({});
+
+        let result  = [];
+
+        cursor.forEach(
+            (doc) => {
+                result.push(
+                    doc
+                );
+                console.log(JSON.stringify(doc, null, 4));
+            },
+            (error) => {
+                client.close();
+            }
+        );
+        client.close();
+            
+        res.json(result);
+      }
+    });
+
+   
+    //res.send('Get request is working ');
+   
+});*/
